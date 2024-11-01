@@ -170,19 +170,6 @@ ul li a:hover{
    margin-left: 590px;
    margin-top: 70px;
 }
-.btnn{
-   border-radius: 5px;
-   background: #ff7200;
-   margin-top: 10px;
-   font-size: 15px;
-   width: 100px;
-    height: 40px;
-    border-color: #ff7200;
-    color:#000;
-}
-.btnn:hover{
-   background: #fff;
-   transition: .4s ease;
-   border-color: #fff;
-}
+
+
 
