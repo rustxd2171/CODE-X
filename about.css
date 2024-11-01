@@ -157,7 +157,7 @@ ul li a:hover{
    font-style: italic;
    font-size: x-large;
    color: #fff;
-   margin-top: 230px;
+   margin-top: -270px;
 }
 .content .h1{
    color: #fff;
@@ -165,5 +165,25 @@ ul li a:hover{
    text-decoration-line: underline;
    text-decoration-color: #ff7200;
    text-underline-offset: 0.4em;
+}
+.img{
+   margin-left: 590px;
+   margin-top: 70px;
+}
+.btnn{
+   border-radius: 5px;
+   background: #ff7200;
+   margin-top: 10px;
+   font-size: 15px;
+   width: 100px;
+    height: 40px;
+    border-color: #ff7200;
+    color:#000;
+    margin-left: 400px;
+}
+.btnn:hover{
+   background: #fff;
+   transition: .4s ease;
+   border-color: #fff;
 }
 
