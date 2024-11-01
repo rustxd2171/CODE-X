@@ -157,7 +157,7 @@ ul li a:hover{
    font-style: italic;
    font-size: x-large;
    color: #fff;
-   margin-top: -270px;
+   margin-top:-250px;
 }
 .content .h1{
    color: #fff;
@@ -167,8 +167,8 @@ ul li a:hover{
    text-underline-offset: 0.4em;
 }
 .img{
-   margin-left: 590px;
-   margin-top: 70px;
+   margin-left: 600px;
+   margin-top: 100px;
 }
 
 
