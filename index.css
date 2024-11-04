@@ -45,14 +45,12 @@ ul{
     justify-content: center;
     align-items: center;
 }
-
 ul li{
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
     font-size: 14px;
 }
-
 ul li a{
     text-decoration: none;
     color: #fff;
@@ -203,7 +201,6 @@ ul li a:hover{
     margin-top: 30px;
     font-family: sans-serif;
 }
-
 .form input:focus{
     outline: none;
 }
@@ -212,7 +209,6 @@ ul li a:hover{
     color: #fff;
     font-family: Arial;
 }
-
 .btnn{
     width: 240px;
     height: 40px;
@@ -262,4 +258,17 @@ ul li a:hover{
 }
 .icons ion-icon:hover{
     color: #ff7200;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Keeps navbar above other elements */
 }
