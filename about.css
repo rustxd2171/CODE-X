@@ -83,7 +83,7 @@ body {
 /* Content */
 .content {
    text-align: center;
-   padding-top: 0px;
+   padding-top:  0px;
 }
 .content h1 {
    font-size: 36px;
@@ -94,11 +94,10 @@ body {
    text-underline-offset: 8px;
 }
 .content .par {
-   color: #555;
+   color: #333;
    font-size: 18px;
    line-height: 1.5;
    margin-bottom: 0px;
-   margin-right: 0px;
    display: flex;
    flex-direction: column;
 }
@@ -118,16 +117,11 @@ body {
    border-radius: 5px;
    cursor: pointer;
    transition: background 0.3s;
-   margin-left: 80%;
+   margin-left: 55%;
    margin-top: 15px;
 }
 .btnn:hover {
    background: #ff9c42;
-}
-.liw {
-   font-size: 16px;
-   margin-top: 20px;
-   color: #333;
 }
 
 /* Social Media Icons */
@@ -141,59 +135,50 @@ body {
 .icons a:hover {
    color: #ff7200;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
    .navbar {
-       flex-direction: column;
        align-items: flex-start;
+      top: 100px;
+      margin-bottom: 30px;
    }
-   .img{
-      display: none;
-   }
+
    .menu ul {
        flex-direction: column;
        gap: 10px;
    }
-
+   .img{
+      display: none;
+   }
+   .content{
+      align-items: center;
+      padding-top: 10px;
+      border-radius: 17px;
+   }
+   }
    .content h1 {
        font-size: 28px;
    }
 
-   .content {
-   text-align: center;
-   padding: 10px;
-}
-.btnn{
-   margin-left: 50%;
-}
-.content h1 {
-   font-size: 36px;
-   color: #333;
-   margin-bottom: 1px;
-   text-decoration-line: underline;
-   text-decoration-color: #ff7200;
-   text-underline-offset: 8px;
-}
-.btnn{
-    margin-bottom: 0px;
-}
    .content .par {
        font-size: 16px;
+       margin-bottom: 100px;
    }
    
    .form {
        padding: 20px;
    }
 
-   .btn, .btnn, .cn {
-       padding: 10px 16px;
+   body{
+       background: #f0f2f5;
    }
-}
 
 @media (max-width: 480px) {
    .logo {
        font-size: 20px;
+   }
+   .background{
+       display: none;
    }
 
    .content h1 {
@@ -209,9 +194,64 @@ body {
        flex-direction: column;
        gap: 10px;
    }
-
    .search {
        flex-direction: column;
        gap: 10px;
+       display: none;
+   }
+   body{
+       background: #f0f2f5;
+}
+}
+/* HAMBURGER MENU */
+.menu-icon{
+   display: none;
+}
+
+.menu-icon i{
+   color: #fff;
+   font-size: xx-large;
+}
+@media (max-width:768px) {
+   nav ul{
+       position: absolute;
+       top: 79px;
+       left: 21px;
+       right: 21px;
+       flex-direction: column;
+       text-align: center;
+       background: #333;
+       box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+       border-radius: 8px;
+       gap: 0;
+       overflow: hidden;
+   }
+   nav ul li{
+       padding: 10px;
+       padding-bottom: 10px;
+   }
+   .menu-icon{
+       display: block;
+   }
+   #menuList{
+       transition: all 0.5s;
+   }
+   .search{
+       display: none;
+   }
+   .logo{
+       font-size: 25px;
+   }
+}
+
+/* Animations */
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+       transform: translateY(20px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
    }
 }

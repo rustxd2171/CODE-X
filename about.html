@@ -14,13 +14,16 @@
                 <h2 class="logo">CODE - X</h2>
             </div>
             <div class="menu">
-                <ul>
+                <ul id="menuList">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="service.html">SERVICE</a></li>
                     <li><a href="#">DESIGN</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
+                <div class="menu-icon">
+                    <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                </div>
             </div>
             <div class="search">
                 <input class="srch" type="search" name="" placeholder="Type To text">
@@ -31,7 +34,6 @@
             <h1 class="h1">
                 About us
             </h1>
-        </div>
         <div class="content">
             <p class="par">
                 At CODE - X, we are passionate about delivering high-quality
@@ -47,7 +49,24 @@
                         <a href="" class="href">Read more</a>
                    </button>
             </p>
-    </div>
+        </div>
+        </div>
     <img class="img" src="about.png" alt="">
+    </div>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
 </body>
 </html>
