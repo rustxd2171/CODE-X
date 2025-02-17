@@ -98,7 +98,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s linear;
     margin-top: 10px;
 }
 
@@ -133,7 +133,24 @@ body {
 .cn:hover {
     background: #ff9c42;
 }
-
+/*COLUMN*/
+.columns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+    margin-top: 20px;
+    gap: 25px;
+}
+.column{
+    flex: 1;
+    align-items: center;
+    padding: 10px 90px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    
+}
 /* Form */
 .form {
     background: #fff;
@@ -239,15 +256,45 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+    .content{
+        padding: 50px 20px;
+        flex: 1;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 1s ease-in-out;
+        margin-top: 10px;
+    }
 
+    .content h1, .par{
+        text-align: center;
+        margin-left: 0px;
+    }
     .content h1 {
         font-size: 28px;
+        color: #333;
     }
 
     .content .par {
         font-size: 16px;
+        color: #555;
     }
-    
+    .columns{
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5px 0;
+        margin-top: 20px;
+        gap: 25px;
+    }
+    .column{
+        flex: 1;
+        padding: 5px 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        
+    }
     .form {
         padding: 20px;
     }
@@ -258,17 +305,11 @@ footer {
     body{
         background: #f0f2f5;
     }
-    .form {
-        margin-right: 0px;
-    }
 }
 
 @media (max-width: 480px) {
     .logo {
         font-size: 20px;
-    }
-    .background{
-        display: none;
     }
 
     .content h1 {
@@ -284,6 +325,21 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+    .columns{
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5px 0;
+        margin-top: 20px;
+        gap: 25px;
+    }
+    .column{
+        flex: 1;
+        padding: 5px 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        
+    }
 
     .search {
         flex-direction: column;
@@ -292,9 +348,6 @@ footer {
     }
     body{
         background: #f0f2f5;
-    }
-    .form {
-        margin-right: 0px;
     }
 }
 /* HAMBURGER MENU */
