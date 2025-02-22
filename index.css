@@ -133,7 +133,7 @@ body {
 .cn:hover {
     background: #ff9c42;
 }
-/*COLUMN*/
+/*COLUMNS*/
 .columns{
     display: flex;
     flex-flow: row wrap;
@@ -149,7 +149,14 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    
+}
+.button{
+    background-color: #ff7200;
+    padding: 8px 6px;
+    border-radius: 2px;
+    border: none;
+    color:beige;
+    cursor: pointer;
 }
 /* Form */
 .form {
@@ -281,11 +288,13 @@ footer {
         color: #555;
     }
     .columns{
-        display: flex;
+        display: grid;
+        grid-template-columns: 3fr;
         flex-flow: row wrap;
         margin: 5px 0;
         margin-top: 20px;
         gap: 25px;
+        
     }
     .column{
         flex: 1;
@@ -294,6 +303,14 @@ footer {
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         
+    }
+    .button{
+        background-color: #ff7200;
+        width: 15rex;
+        border-radius: 2px;
+        border: none;
+        color:beige;
+        cursor: pointer;
     }
     .form {
         padding: 20px;
@@ -326,11 +343,12 @@ footer {
         gap: 10px;
     }
     .columns{
-        display: flex;
         flex-flow: row wrap;
         margin: 5px 0;
         margin-top: 20px;
         gap: 25px;
+        display: grid;
+        grid-template-columns: 3fr;
     }
     .column{
         flex: 1;
@@ -338,7 +356,8 @@ footer {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        
+        display: grid;
+        grid-template-columns: 3fr;
     }
 
     .search {

@@ -189,11 +189,11 @@ footer {
         margin-bottom: 75px;
     }
     .wrapper{
-        margin-left: 0px;
+        margin-left: 13rem;
         align-items: baseline;
         padding: 10px 10px;
         width: 290px;
-        margin-bottom: 22rex;
+        margin-bottom: 6rem;
         border-radius: 0px;
         box-shadow: 0px;
         border: 0px;
@@ -201,6 +201,17 @@ footer {
     .menu ul {
         flex-direction: column;
         gap: 10px;
+    }
+}
+@media(max-width: 480px) {
+    .wrapper{
+        margin-left: 10rex;
+        align-items: baseline;
+        padding: 10px 0px;
+        margin-bottom: 22rex;
+        border-radius: 0px;
+        box-shadow: 0px;
+        border: 0px;
     }
 }
 /* HAMBURGER MENU */
