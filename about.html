@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/png" href="./android-chrome-192x192.png">
 </head>
+
 <body>
     <div class="main">
         <nav class="navbar">
@@ -19,8 +21,11 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="price.html">PRICING</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <button class="mode" id="modeToggle">Dark mode
+                        <i class="bx bxs-moon"></i>
+                    </button>
                 </ul>
                 <div class="menu-icon">
                     <i class='bx bx-menu' onclick="toggleMenu()"></i>
@@ -31,46 +36,104 @@
                 <button class="btn" onclick="window.location.href='#'">Search</button>
             </div>
         </nav>
-        <div class="content">
-            <h1 class="h1">
-                About us
-                    <p class="par">
-                        At CODE - X, we are passionate about delivering high-quality
-                        services that make a positive impact. Founded in 2024 , 
-                         we have built a reputation for excellence, innovation, and customer 
-                        satisfaction. Our team of dedicated professionals works tirelessly to
-                        ensure that every project is handled with care, attention to detail, 
-                        and a commitment to exceeding expectations. Whether you're a first-time 
-                        customer or a loyal supporter, we are here to provide solutions that meet
-                        your unique needs. Join us on our journey as we continue to grow and create
-                        lasting relationships with our community.
-                    </p>
-                    <button class="bttn">
-                            Read more
-                    </button>
-                    <div class="img">
-                        <img src="./about.png" alt="">
+        <div class="all">
+            <div class="content">
+                <div class="content-wrapper">
+                    <div class="text">
+                        <h2>About Us</h2>
                     </div>
-            </h1>
+                    <div class="par">
+                        <p>
+                            At CODE - X, we are passionate about delivering high-quality services that make a positive
+                            impact.
+                            Founded in 2024, we have built a reputation for excellence, innovation, and customer
+                            satisfaction.
+                            Our team of dedicated professionals works tirelessly to ensure that every project is handled
+                            with care,
+                            attention to detail, and a commitment to exceeding expectations. Whether you're a first-time
+                            customer
+                            or a loyal supporter, we are here to provide solutions that meet your unique needs. Join us
+                            on our
+                            journey as we continue to grow and create lasting relationships with our community. Thank
+                            you!
+                        </p>
+                        <p class="extra-text">
+                            We believe that true success comes from continuous improvement and collaboration. Our goal
+                            is not only
+                            to meet industry standards but to set new benchmarks for quality and customer experience. By
+                            leveraging
+                            cutting-edge technology and fostering a culture of creativity, we ensure that our solutions
+                            remain
+                            innovative and effective. Your trust and support drive us forward, and we look forward to
+                            serving you
+                            for many years to come.
+                        </p>
+                        <button class="btnn" onclick="toggleText()">Read More</button>
+                    </div>
+                </div>
+                <img class="image" src="about.png" alt="About Us">
+            </div>
         </div>
-        <footer>
-            <p>&copy; 2024 Our Company Name. All rights reserved.</p>
-        </footer>
     </div>
     <script>
         let menuList = document.getElementById("menuList")
         menuList.style.maxHeight = "0px";
 
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
                 menuList.style.maxHeight = "300px";
             }
-            else{
+            else {
                 menuList.style.maxHeight = "0px";
             }
         }
-        
+    </script>
+    <script>
+        function toggleText() {
+            const extraText = document.querySelector('.extra-text');
+            const button = document.querySelector('.btnn');
+
+            if (extraText.style.display === "none" || extraText.style.display === "") {
+                extraText.style.display = "block";
+                button.textContent = "Read Less";
+            } else {
+                extraText.style.display = "none";
+                button.textContent = "Read More";
+            }
+        // JavaScript function to toggle color
+        function toggleColor() {
+            var text = document.getElementById('text');
+            if (text.style.color === 'black') {
+                text.style.color = 'blue';  // Change to any color you want
+            } else {
+                text.style.color = 'black'; // Reset to initial color
+            }
+        }
+        }
+    </script>
+    <script>
+        // Select the button
+        const modeToggle = document.getElementById('modeToggle');
+
+        // Add event listener to toggle the mode
+        modeToggle.addEventListener('click', () => {
+            // Toggle the "dark-mode" class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update button text and icon based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>'; // Switch to light mode icon and text
+            } else {
+                modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>'; // Switch to dark mode icon and text
+            }
+             // Toggle the color of the paragraph text
+             if (document.body.classList.contains('dark-mode')) {
+                text.style.color = "lightblue"; // Set paragraph text color to light blue in dark mode
+            } else {
+                text.style.color = "black"; // Reset to black in light mode
+            }
+        });
     </script>
 </body>
+
 </html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="price.css">
+    <link rel="icon" type="image/png" href="./android-chrome-192x192.png">
+    <title>Price</title>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODE - X</h2>
+            </div>
+            <div class="menu">
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>  
+                    <li><a href="price.html">PRICING</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <button class="mode" id="modeToggle">Dark mode
+                        <i class="bx bxs-moon"></i>
+                    </button>
+                </ul>
+                <div class="menu-icon">
+                    <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                </div>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <button class="btn" onclick="window.location.href='#'">Search</button>
+            </div>
+        </nav>
+    <section class="card container grid">
+        <div class="card__container grid">
+            <!--==================== CARD 1 ====================-->
+            <article class="card__content grid">
+                <div class="card__pricing">
+                    <div class="card__pricing-number">
+                        <span class="card__pricing-symbol">$</span>0
+                    </div>
+                    <span class="card__pricing-month">/month</span>
+                </div>
+
+                <header class="card__header">
+                    <div class="card__header-circle grid">
+                        <img src="free-coin.png" alt="" class="card__header-img">
+                    </div>
+                    
+                    <span class="card__header-subtitle">Free plan</span>
+                    <h1 class="card__header-title">Basic</h1>
+                </header>
+                
+                <ul class="card__list grid">
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">3 user request</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">10 downloads per day</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Daily content updates</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Fully editable files</p>
+                    </li>
+                </ul>
+                <a  class="card__button" href="https://www.paypal.com/ncp/payment/GLBJVB8D4Y5RL">Choose this plan</a>
+            </article>
+
+            <!--==================== CARD 2 ====================-->
+            <article class="card__content grid">
+                <div class="card__pricing">
+                    <div class="card__pricing-number">
+                        <span class="card__pricing-symbol">$</span>19
+                    </div>
+                    <span class="card__pricing-month">/month</span>
+                </div>
+
+                <header class="card__header">
+                    <div class="card__header-circle grid">
+                        <img src="pro-coin.png" alt="" class="card__header-img">
+                    </div>
+
+                    <span class="card__header-subtitle">Most popular</span>
+                    <h1 class="card__header-title">Professional</h1>
+                </header>
+                
+                <ul class="card__list grid">
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">100 user request</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlimited downloads</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlock all features from our site</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Daily content updates</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Fully editable files</p>
+                    </li>
+                </ul>
+                <a  class="card__button" href="https://www.paypal.com/ncp/payment/GLBJVB8D4Y5RL">Choose this plan</a>
+            </article>
+
+            <!--==================== CARD 3 ====================-->
+            <article class="card__content grid">
+                <div class="card__pricing">
+                    <div class="card__pricing-number">
+                        <span class="card__pricing-symbol">$</span>29
+                    </div>
+                    <span class="card__pricing-month">/month</span>
+                </div>
+
+                <header class="card__header">
+                    <div class="card__header-circle grid">
+                        <img src="enterprise-coin.png" alt="" class="card__header-img">
+                    </div>
+
+                    <span class="card__header-subtitle">For Developers</span>
+                    <h1 class="card__header-title">Enterprise</h1>
+                </header>
+                
+                <ul class="card__list grid">
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlimited  user request</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlimited downloads</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlock all features from our site</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Daily content updates</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Fully editable files</p>
+                    </li>
+                </ul>
+                <a  class="card__button" href="https://www.paypal.com/ncp/payment/GLBJVB8D4Y5RL">Choose this plan</a>
+            </article>
+        </div>
+    </section>
+    </div>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
+     <script>
+        // Select the button
+        const modeToggle = document.getElementById('modeToggle');
+
+        // Add event listener to toggle the mode
+        modeToggle.addEventListener('click', () => {
+            // Toggle the "dark-mode" class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update button text and icon based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>'; // Switch to light mode icon and text
+            } else {
+                modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>'; // Switch to dark mode icon and text
+            }
+             // Toggle the color of the paragraph text
+             if (document.body.classList.contains('dark-mode')) {
+                text.style.color = "lightblue"; // Set paragraph text color to light blue in dark mode
+            } else {
+                text.style.color = "black"; // Reset to black in light mode
+            }
+        });
+    </script>
+</body>
+</html>

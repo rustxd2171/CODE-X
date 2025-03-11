@@ -1,0 +1,238 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:honeydew;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+  }
+  
+  /* Button Styling */
+  .mode{
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+/* Main Container */
+.main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Keeps navbar above other elements */
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.menu ul :hover {
+    text-decoration-line: underline;
+    text-decoration-color: #ff9c42;
+    text-underline-offset: 6px;
+    transition: 1s;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 8px;
+}
+
+.btn {
+    padding: 8px 12px;
+    background: #ff7200;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ff9c42;
+}
+/* HAMBURGER MENU */
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: xx-large;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff7200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #ff9c42;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    padding: 20px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+    nav ul{
+        position: absolute;
+        top: 79px;
+        left: 21px;
+        right: 21px;
+        flex-direction: column;
+        text-align: center;
+        background: #333;
+        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+    .search{
+        display: none;
+    }
+    .logo{
+        font-size: 25px;
+    }
+}

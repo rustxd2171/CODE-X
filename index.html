@@ -19,8 +19,11 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="service.html">SERVICE</a></li>  
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="price.html">PRICING</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <button class="mode" id="modeToggle">Dark mode
+                        <i class="bx bxs-moon"></i>
+                    </button>
                 </ul>
                 <div class="menu-icon">
                     <i class='bx bx-menu' onclick="toggleMenu()"></i>
@@ -31,7 +34,6 @@
                 <button class="btn" onclick="window.location.href='#'">Search</button>
             </div>
         </nav>
-        
         <div class="content">
             <h1>Web Design & <br><span>Development</span> <br>Course</h1>
             <p class="par">
@@ -49,7 +51,7 @@
                 <p>HTML is the foundation of web development, providing structure for pages. 
                     Learning HTML helps create organized content with headings, paragraphs, 
                     and links, making it essential for building websites.</p>
-                    <button class="button">Enroll</button>
+                    <button class="button"><a  class="enroll" href="page 2.html">Enroll</a></button>
             </div>
             <div class="column">
                 <h2>Learn CSS
@@ -59,7 +61,7 @@
                     colors, and fonts. Learning CSS helps create engaging designs
                     that adapt to different screen sizes, improving user
                     experience.join our journey</p>
-                      <button class="button">Enroll</button>
+                      <button class="button"><a  class="enroll" href="page 2.html">Enroll</a></button>
             </div>
             <div class="column">
                 <h2>Learn JAVA.S
@@ -68,16 +70,143 @@
                 <p>JavaScript adds interactivity to websites, enabling dynamic content like
                     forms and real-time updates. Learning JavaScript enhances user experience 
                     and allows you to build interactive web applications.</p>
-                    <button class="button">Enroll</button>
+                    <button class="button"><a  class="enroll" href="page 2.html">Enroll</a></button>
+            </div>
+        </section>
+        <section class="card container grid">
+            <div class="card__container grid">
+                <!--==================== CARD 1 ====================-->
+                <article class="card__content grid">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">$</span>0
+                        </div>
+                        <span class="card__pricing-month">/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid">
+                            <img src="free-coin.png" alt="" class="card__header-img">
+                        </div>
+                        
+                        <span class="card__header-subtitle">Free plan</span>
+                        <h1 class="card__header-title">Basic</h1>
+                    </header>
+                    
+                    <ul class="card__list grid">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">3 user request</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">10 downloads per day</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Daily content updates</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Fully editable files</p>
+                        </li>
+                    </ul>
+                    <a  class="card__button" href="zero.html">Choose this plan</a>
+                </article>
+    
+                <!--==================== CARD 2 ====================-->
+                <article class="card__content grid">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">$</span>19
+                        </div>
+                        <span class="card__pricing-month">/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid">
+                            <img src="pro-coin.png" alt="" class="card__header-img">
+                        </div>
+    
+                        <span class="card__header-subtitle">Most popular</span>
+                        <h1 class="card__header-title">Professional</h1>
+                    </header>
+                    
+                    <ul class="card__list grid">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">100 user request</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited downloads</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlock all features from our site</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Daily content updates</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Fully editable files</p>
+                        </li>
+                    </ul>
+                    <a  class="card__button" href="https://www.paypal.com/ncp/payment/RAXR27GCH79UL">Choose this plan</a>
+                </article>
+    
+                <!--==================== CARD 3 ====================-->
+                <article class="card__content grid">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">$</span>29
+                        </div>
+                        <span class="card__pricing-month">/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid">
+                            <img src="enterprise-coin.png" alt="" class="card__header-img">
+                        </div>
+    
+                        <span class="card__header-subtitle">For Developers</span>
+                        <h1 class="card__header-title">Enterprise</h1>
+                    </header>
+                    
+                    <ul class="card__list grid">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited  user request</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited downloads</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlock all features from our site</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Daily content updates</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Fully editable files</p>
+                        </li>
+                    </ul>
+                    <a  class="card__button" href="https://www.paypal.com/ncp/payment/38C3UVHPXNWEJ">Choose this plan</a>
+                </article>
             </div>
         </section>
         <div class="form">
             <h2>Login Here</h2>
-            <input type="email" name="email" placeholder="Enter Email Here" required>
-            <input type="password" name="password" placeholder="Enter Password Here" required>
-            <button class="btnn"> <a class="btnn" href="page3.html">Login</a></button>
-
-            <p class="link">Don't have an account?<br>
+            <input type="email" id="email" placeholder="Enter Email Here" required>
+            <input type="password" id="password" placeholder="Enter Password Here" required>
+            <button    id="submit" class="btnn">Login</a></button>
+            <p class="link" style="color: #121212;">Don't have an account?<br>
                 <a href="registerpage.html">Sign up here</a>
             </p>
             <p class="liw">Log in with</p>
@@ -90,28 +219,38 @@
             </div>
         </div>
         <footer>
+            <div class="row">
+            <div class="footercontent">
+                <h3>Contact Us</h3>
+                <p>Email:td123@gmail.com</p>
+                <p>Phone:+251 975876505</p>
+                <p>Address:Summit,20 meter</p>
+            </div>
+            <div class="quicklinks">
+                <h3>Quick links</h3>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="service.html">SERVICE</a>
+                <a href="price.html">PRICING</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="icon">
+                <h3>Follow us</h3>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-google'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            </div>
             <p>&copy; 2024 Our Company Name. All rights reserved.</p>
         </footer>
     </div>
-    <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "300px";
-            }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-        
-    </script>
     <script
     src="https://widget.galichat.com/gali-embeded.min.js" 
     chat-hash="5t616aaglwi2ybmjppew7y" 
     defer>
   </script>
+  <script src="index.js"></script>
 </body>
 </html>

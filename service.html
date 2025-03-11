@@ -1,48 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODE - X</title>
     <link rel="stylesheet" href="service.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="./android-chrome-192x192.png">
 </head>
 <body>
-    <div class="main">
-        <nav class="navbar">
-            <div class="icon">
-                <h2 class="logo">CODE - X</h2>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Type To text">
-                <button class="btn" onclick="window.location.href='#'">Search</button>
-            </div>
-        </nav>
-        <div class="card">
-            <div class="cards">
-            <h1 class="html">
-                <i class='bx bxl-html5' style="color: #ff7200"></i>
-            </h1>
-            </div>
-            <div class="cards">
-                <h1 class="css">
-                    <i class='bx bxl-css3'></i>
-                </h1>
-            </div>
-            <div class="cards">
-                <h1 class="java">
-                    <i class='bx bxl-javascript' style='color:#ffe200' ></i>
-                </h1>
-            </div>
+            <!-- Navbar -->
+                <div class="main">
+                    <nav class="navbar">
+                        <div class="icon">
+                            <h2 class="logo">CODE - X</h2>
+                        </div>
+                        <div class="menu">
+                            <ul id="menuList">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="service.html">SERVICE</a></li>  
+                                <li><a href="price.html">PRICING</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                                <button class="mode" id="modeToggle">Dark mode
+                                    <i class="bx bxs-moon"></i>
+                                </button>
+                            </ul>
+                            <div class="menu-icon">
+                                <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <input class="srch" type="search" name="" placeholder="Type To text">
+                            <button class="btn" onclick="window.location.href='#'">Search</button>
+                        </div>
+                    </nav>
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>Our Services</h1>
+                <p>We provide top-quality digital solutions to help businesses grow and thrive in a competitive market.
+                </p>
+            </section>
+
+            <!-- Services Section -->
+            <section class="services">
+                <div class="service-card">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Web Development</h3>
+                    <p>We build modern, responsive, and user-friendly websites tailored to your business needs.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="bx bx-paint"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Our design team creates intuitive and visually appealing user interfaces for better user
+                        experience.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="bx bx-mobile-alt"></i>
+                    <h3>App Development</h3>
+                    <p>We develop high-performance mobile applications for both iOS and Android platforms.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="bx bx-search"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your online visibility with our SEO strategies designed to rank your website higher.</p>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <h2>Ready to elevate your business?</h2>
+                <button class="contact"><a  class="contact" href="contact.html">Contact us</a></button>
+            </section>
     </div>
+    <script>
+        // Select the button
+        const modeToggle = document.getElementById('modeToggle');
+
+        // Add event listener to toggle the mode
+        modeToggle.addEventListener('click', () => {
+            // Toggle the "dark-mode" class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update button text and icon based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>'; // Switch to light mode icon and text
+            } else {
+                modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>'; // Switch to dark mode icon and text
+            }
+        });
+
+        //hamburger menu
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "300px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
 </body>
+
 </html>

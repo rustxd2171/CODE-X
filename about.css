@@ -11,8 +11,23 @@ body {
    justify-content: center;
    align-items: center;
    min-height: 100vh;
-   background: #f0f2f5;
 }
+
+/* Dark Mode */
+body.dark-mode {
+   background-color: #222;
+   color: white;
+ }
+ 
+ /* Button Styling */
+ .mode{
+   font-size: 16px;
+   cursor: pointer;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   transition: background-color 0.3s, color 0.3s;
+ }
 
 /* Main Container */
 .main {
@@ -24,7 +39,7 @@ body {
 /* Navbar */
 .navbar {
    display: flex;
-   margin-bottom: 30px;
+   margin-bottom: 20rex;
    justify-content: space-between;
    align-items: center;
    padding: 20px;
@@ -81,60 +96,80 @@ body {
 .btn:hover {
    background: #ff9c42;
 }
-
-/*CONTENT*/
-.content{
+.all {
    display: flex;
-   margin-bottom: 100px;
-   border-radius: 10px;
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-   background: rgba(255, 255, 255, 0.1);
-   padding: 10px 22px;
-   animation: fadeIn 1s ease-in-out;
+   justify-content: space-between; /* Space between the text content and the image */
+   align-items: center; /* Vertically align text and image */
+   width: 100%;
+   margin-bottom: 12rem;
 }
-.content h1{
-   margin-left: 1px;
-   text-align: center;
-   margin-top: 19px;
+
+.content {
+   display: flex;
+   flex-direction: row; /* Align the content and image horizontally */
+   width: 100%;
+}
+
+ /* Dark mode paragraph color */
+ .dark-mode .text {
+   color: #f0f2f5;
+}
+
+
+.text {
+   flex: 1; /* The text takes up the left space */
+   color: black;
    text-decoration: underline;
-   text-underline-offset: 3px;
+   text-underline-offset: 5px;
    text-decoration-color: #ff7200;
+   font-size: large;
+   margin-left: 5rem;
+   margin-bottom: 20px;
 }
 
-.par{
-   font-size: 15px;
-   display: flex;
+.par {
+   flex: 1; /* Paragraph takes up the remaining space alongside the heading */
+   padding: 10px;
+   width: 400px; /* Set small width */
+   text-align: justify;
    font-style: italic;
-   color: #333;
-   columns:auto;  
-   text-align: center;
+   border: none; 
 }
-.bttn{
-   margin-left: 80px;
-   width: 100px;
-   padding: 12px;
-   background: #ff7200;
-   color: #fff;
+
+.image {
+   width: 400px; /* Adjust the image width */
+   height: auto;
+   margin-left: -8rem; /* Adds space between the paragraph and image */
+}
+
+.btnn {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: #ff7200; /* Button color */
+   color: white;
    border: none;
-   border-radius: 5px;
    cursor: pointer;
-   transition: background 0.3s;
+   border-radius: 6px;
 }
-img {
-   width: 35%;
-   margin-left: 28rem; 
- } 
+
+.btnn:hover {
+   background-color: #e55d00; /* Button hover effect */
+}
+
+.extra-text {
+   display: none;
+   margin-top: 10px;
+}
+
+/* Ensures that the text content stays to the left and the image is on the right */
+.content-wrapper {
+   display: flex;
+   flex-direction: column; /* Stack the text and paragraph vertically */
+   width: 60%; /* Adjust the width of the content area */
+}
 
 .menu-icon{
    display: none;
-}
-
-footer {
-   background: #333;
-   color: white;
-   text-align: center;
-   padding: 1rem;
-   border-radius: 10px;
 }
 
 /* Responsive Design */
