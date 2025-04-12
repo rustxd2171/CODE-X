@@ -6,10 +6,15 @@
     <title>CODE - X</title>
     <link rel="stylesheet" href="index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/png" href="./android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="./codex logo.jpg">
 </head>
+
 <body>
     <div class="main">
+        <div id="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
         <nav class="navbar">
             <div class="icon">
                 <h2 class="logo">CODE - X</h2>
@@ -18,7 +23,7 @@
                 <ul id="menuList">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="service.html">SERVICE</a></li>  
+                    <li><a href="service.html">SERVICE</a></li>
                     <li><a href="price.html">PRICING</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <button class="mode" id="modeToggle">Dark mode
@@ -34,45 +39,180 @@
                 <button class="btn" onclick="window.location.href='#'">Search</button>
             </div>
         </nav>
-        <div class="content">
-            <h1>Web Design & <br><span>Development</span> <br>Course</h1>
-            <p class="par">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 
-                expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus 
-                <br> a quae totam ipsa illum minus laudantium?
-            </p>
-            <button class="cn"><a class="cn" href="page 2.html">Get Started</a></button>
+        <div class="contai">
+            <div class="content">
+                <h1 class="web"><span class="highlight">Web Design &</span> Development Course</h1>
+                <h1 class="code">Learn to code, Shape your future</h1>
+                <p class="par">
+                    Empowering aspiring developers to master the art of coding. <br>Codex offers hands-on learning in
+                    HTML, CSS,
+                    and JavaScript <br> you with the skills to create, innovate, and shape your digital future.
+                </p>
+                <button><a class="cn" href="page 2.html">Get Started</a></button>
+            </div>
+            <img class="ai" src="./codex pc.jpg" alt="image">
         </div>
         <section class="columns">
             <div class="column">
                 <h2>Learn HTML
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(240, 145, 11, 1);transform: msFilter"><path d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                        style="fill: rgba(240, 145, 11, 1);transform: msFilter">
+                        <path
+                            d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z">
+                        </path>
+                    </svg>
                 </h2>
-                <p>HTML is the foundation of web development, providing structure for pages. 
-                    Learning HTML helps create organized content with headings, paragraphs, 
+                <p>HTML is the foundation of web development, providing structure for pages.
+                    Learning HTML helps create organized content with headings, paragraphs,
                     and links, making it essential for building websites.</p>
-                    <button class="button"><a  class="enroll" href="page 2.html">Enroll</a></button>
+                <button class="button"><a class="enroll" href="page 2.html">Enroll</a></button>
             </div>
             <div class="column">
                 <h2>Learn CSS
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(11, 144, 240, 1);transform: msFilter"><path d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137.905-9.923z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                        style="fill: rgba(11, 144, 240, 1);transform: msFilter">
+                        <path
+                            d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137.905-9.923z">
+                        </path>
+                    </svg>
                 </h2>
                 <p>CSS is essential for styling web pages, controlling layout,
                     colors, and fonts. Learning CSS helps create engaging designs
                     that adapt to different screen sizes, improving user
                     experience.join our journey</p>
-                      <button class="button"><a  class="enroll" href="page 2.html">Enroll</a></button>
+                <button class="button"><a class="enroll" href="page 2.html">Enroll</a></button>
             </div>
             <div class="column">
                 <h2>Learn JAVA.S
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(249, 240, 0, 1);transform: msFilter"><path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                        style="fill: rgba(249, 240, 0, 1);transform: msFilter">
+                        <path
+                            d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z">
+                        </path>
+                    </svg>
                 </h2>
                 <p>JavaScript adds interactivity to websites, enabling dynamic content like
-                    forms and real-time updates. Learning JavaScript enhances user experience 
+                    forms and real-time updates. Learning JavaScript enhances user experience
                     and allows you to build interactive web applications.</p>
-                    <button class="button"><a  class="enroll" href="page 2.html">Enroll</a></button>
+                <button class="button"><a class="enroll" href="page 2.html">Enroll</a></button>
             </div>
         </section>
+        <div class="sample">
+            <div class="sample-par">
+                <h1 style="font-weight: 600;">Code Your Future 🔮</h1>
+                <br>
+                <p class="morepar fade-in">
+                    At Codex, we believe coding is for everyone. Whether you're a curious beginner or someone
+                    looking to sharpen your skills, our interactive lessons make learning HTML, CSS, and JavaScript
+                    accessible and enjoyable. Build confidence as you create real world projects, solve coding
+                    challenges,
+                    and master essential programming concepts all at your own pace. Curious about coding? Try a quick
+                    sample
+                    below and see how easy it is to start learning with Codex.</p>
+            </div>
+            <div class="snippet" id="snippet">
+                <h1 class="example" id="example">🔴🟡🟢HTML Example</h1>
+                <br>
+                <pre id="static-code">
+ &lt;<span class="tags">!DOCTYPE html</span>&gt;
+ &lt;<span class="tags">html</span>&gt;
+  &lt;<span class="tags">head</span>&gt;
+      &lt;<span class="tags">title</span>&gt;<span class="attribute-values">Page Title</span>&lt;/<span class="tags">title</span>&gt;
+  &lt;/<span class="tags">head</span>&gt;
+&lt;<span class="tags">body</span>&gt;
+                
+    &lt;<span class="tags">h1</span>&gt;<span class="attribute-values">This is a Heading</span>&lt;/<span class="tags">h1</span>&gt;
+    &lt;<span class="tags">p</span>&gt;<span class="attribute-values">This is a paragraph.</span>&lt;/<span class="tags">p</span>&gt;
+                
+&lt;/<span class="tags">body</span>&gt;
+&lt;/<span class="tags">html</span>&gt;
+                  </pre>
+                <br>
+                <button class="btn-run" onclick="redirectToResult()">Run Code</button>
+            </div>
+        </div>
+        <div class="editor">
+            <div class="tandpar">
+                <h1 class="code-editor">Code Editor</h1>
+                <p class="editpar">With our online code editor, you can edit code and view the result in your browser
+                </p>
+            </div>
+            <div class="usercode">
+                <h1>🔴🟡🟢HTML CODE</h1>
+                <pre id="static-codetwo">
+&lt;<span class="tags">!DOCTYPE html</span>&gt;
+&lt;<span class="tags">html</span>&gt;
+  &lt;<span class="tags">head</span>&gt;
+    &lt;<span class="tags">title</span>&gt;<span class="attribute-values">Interactive Page</span>&lt;/<span class="tags">title</span>&gt;
+  &lt;/<span class="tags">head</span>&gt;
+  &lt;<span class="tags">body</span>&gt;
+
+    &lt;<span class="tags">h1</span>&gt;<span class="attribute-values">Hello World</span>&lt;/<span class="tags">h1</span>&gt;
+    &lt;<span class="tags">p</span>&gt;<span class="attribute-values">Welcome to this simple example page.</span>&lt;/<span class="tags">p</span>&gt;
+    &lt;<span class="tags">ul</span>&gt;
+      &lt;<span class="tags">li</span>&gt;<span class="attribute-values">Item 1</span>&lt;/<span class="tags">li</span>&gt;
+      &lt;<span class="tags">li</span>&gt;<span class="attribute-values">Item 2</span>&lt;/<span class="tags">li</span>&gt;
+      &lt;<span class="tags">li</span>&gt;<span class="attribute-values">Item 3</span>&lt;/<span class="tags">li</span>&gt;
+    &lt;/<span class="tags">ul</span>&gt;
+    &lt;<span class="tags">button</span> <span class="attributes">onclick</span>=<span class="attribute-values">"alert('You clicked the button!');"</span>&gt;<span class="attribute-values">Click Me</span>&lt;/<span class="tags">button</span>&gt;
+
+  &lt;/<span class="tags">body</span>&gt;
+&lt;/<span class="tags">html</span>&gt;
+            </pre>
+                <button class="btn-run" onclick="redirectToResult()" style="margin-top: 10px;">Try Frontend
+                    Editor</button>
+            </div>
+            <div class="result">
+                <h1>RESULT:</h1>
+                <div id="output">
+                    <!DOCTYPE html>
+                    <html>
+
+                    <head>
+                        <title>Interactive Page</title>
+                    </head>
+
+                    <body>
+
+                        <h1>Hello World</h1>
+                        <p>Welcome to this simple example page.</p>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                        <button onclick="alert('You clicked the button!');">Click Me</button>
+
+                    </body>
+
+                    </html>
+                </div>
+                <button class="btn-run" style="margin-top: 10px;">See Result</button>
+            </div>
+        </div>
+        <div class="nextsection">
+            <div class="first">
+                <img class="bigimg" src="./1g.png">
+                <div class="smallimg">
+                    <h2 class="header">Learn HTML</h2>
+                    <button class="firstbtn"><a class="firstbtn" href="page 2.html">Get Started</a></button>
+                </div>
+            </div>
+            <div class="second">
+                <img class="bigimg" src="./2g.png">
+                <div class="smallimg2">
+                    <h2 class="header">Learn CSS</h2>
+                    <button class="firstbtn"><a class="firstbtn" href="page 2.html">Get Started</a></button>
+                </div>
+            </div>
+            <div class="third">
+                <img class="bigimg" src="./3g.png">
+                <div class="smallimg3">
+                    <h2 class="header">Learn Java.S</h2>
+                    <button class="firstbtn"><a class="firstbtn" href="page 2.html">Get Started</a></button>
+                </div>
+            </div>
+        </div>
         <section class="card container grid">
             <div class="card__container grid">
                 <!--==================== CARD 1 ====================-->
@@ -83,16 +223,16 @@
                         </div>
                         <span class="card__pricing-month">/month</span>
                     </div>
-    
+
                     <header class="card__header">
                         <div class="card__header-circle grid">
                             <img src="free-coin.png" alt="" class="card__header-img">
                         </div>
-                        
+
                         <span class="card__header-subtitle">Free plan</span>
                         <h1 class="card__header-title">Basic</h1>
                     </header>
-                    
+
                     <ul class="card__list grid">
                         <li class="card__list-item">
                             <i class="uil uil-check card__list-icon"></i>
@@ -111,9 +251,9 @@
                             <p class="card__list-description">Fully editable files</p>
                         </li>
                     </ul>
-                    <a  class="card__button" href="zero.html">Choose this plan</a>
+                    <a class="card__button" href="zero.html">Choose this plan</a>
                 </article>
-    
+
                 <!--==================== CARD 2 ====================-->
                 <article class="card__content grid">
                     <div class="card__pricing">
@@ -122,16 +262,16 @@
                         </div>
                         <span class="card__pricing-month">/month</span>
                     </div>
-    
+
                     <header class="card__header">
                         <div class="card__header-circle grid">
                             <img src="pro-coin.png" alt="" class="card__header-img">
                         </div>
-    
+
                         <span class="card__header-subtitle">Most popular</span>
                         <h1 class="card__header-title">Professional</h1>
                     </header>
-                    
+
                     <ul class="card__list grid">
                         <li class="card__list-item">
                             <i class="uil uil-check card__list-icon"></i>
@@ -154,9 +294,10 @@
                             <p class="card__list-description">Fully editable files</p>
                         </li>
                     </ul>
-                    <a  class="card__button" href="https://www.paypal.com/ncp/payment/RAXR27GCH79UL">Choose this plan</a>
+                    <a class="card__button" href="https://www.paypal.com/ncp/payment/RAXR27GCH79UL">Choose this
+                        plan</a>
                 </article>
-    
+
                 <!--==================== CARD 3 ====================-->
                 <article class="card__content grid">
                     <div class="card__pricing">
@@ -165,20 +306,20 @@
                         </div>
                         <span class="card__pricing-month">/month</span>
                     </div>
-    
+
                     <header class="card__header">
                         <div class="card__header-circle grid">
                             <img src="enterprise-coin.png" alt="" class="card__header-img">
                         </div>
-    
+
                         <span class="card__header-subtitle">For Developers</span>
                         <h1 class="card__header-title">Enterprise</h1>
                     </header>
-                    
+
                     <ul class="card__list grid">
                         <li class="card__list-item">
                             <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Unlimited  user request</p>
+                            <p class="card__list-description">Unlimited user request</p>
                         </li>
                         <li class="card__list-item">
                             <i class="uil uil-check card__list-icon"></i>
@@ -197,17 +338,20 @@
                             <p class="card__list-description">Fully editable files</p>
                         </li>
                     </ul>
-                    <a  class="card__button" href="https://www.paypal.com/ncp/payment/38C3UVHPXNWEJ">Choose this plan</a>
+                    <a class="card__button" href="https://www.paypal.com/ncp/payment/38C3UVHPXNWEJ">Choose this
+                        plan</a>
                 </article>
             </div>
         </section>
         <div class="form">
-            <h2>Login Here</h2>
-            <input type="email" id="email" placeholder="Enter Email Here" required>
-            <input type="password" id="password" placeholder="Enter Password Here" required>
-            <button    id="submit" class="btnn">Login</a></button>
+            <h2>Login</h2>
+            <form onsubmit="login(event)">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button class="btnn" type="submit" id="submit">Login</button>
+            </form>
             <p class="link" style="color: #121212;">Don't have an account?<br>
-                <a href="registerpage.html">Sign up here</a>
+                <a class="link" href="registerpage.html">Sign up here</a>
             </p>
             <p class="liw">Log in with</p>
             <div class="icons">
@@ -220,37 +364,35 @@
         </div>
         <footer>
             <div class="row">
-            <div class="footercontent">
-                <h3>Contact Us</h3>
-                <p>Email:td123@gmail.com</p>
-                <p>Phone:+251 975876505</p>
-                <p>Address:Summit,20 meter</p>
-            </div>
-            <div class="quicklinks">
-                <h3>Quick links</h3>
-                <a href="index.html">HOME</a>
-                <a href="about.html">ABOUT</a>
-                <a href="service.html">SERVICE</a>
-                <a href="price.html">PRICING</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
-            <div class="icon">
-                <h3>Follow us</h3>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-google'></i></a>
-                <a href="#"><i class='bx bxl-tiktok'></i></a>
-            </div>
+                <div class="footercontent">
+                    <h3>Contact Us</h3>
+                    <p>Email:td123@gmail.com</p>
+                    <p>Phone:+251 975876505</p>
+                    <p>Address:Summit,20 meter</p>
+                </div>
+                <div class="quicklinks">
+                    <h3>Quick links</h3>
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="service.html">SERVICE</a>
+                    <a href="price.html">PRICING</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="icon">
+                    <h3>Follow us</h3>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-google'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                </div>
             </div>
             <p>&copy; 2024 Our Company Name. All rights reserved.</p>
         </footer>
     </div>
-    <script
-    src="https://widget.galichat.com/gali-embeded.min.js" 
-    chat-hash="5t616aaglwi2ybmjppew7y" 
-    defer>
-  </script>
-  <script src="index.js"></script>
+    <script src="https://widget.galichat.com/gali-embeded.min.js" chat-hash="5t616aaglwi2ybmjppew7y" defer>
+    </script>
+    <script type="module" src="index.js" defer></script>
 </body>
+
 </html>
