@@ -11,25 +11,40 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color:honeydew;
+    background-color: honeydew;
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
+
 /* Dark Mode */
 body.dark-mode {
     background-color: #222;
     color: white;
-  }
-  
-  /* Button Styling */
-  .mode{
+}
+
+/* Button Styling */
+.mode {
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     color: white;
     transition: background-color 0.3s, color 0.3s;
-  }
+}
+
+#btnmap {
+    background-color: #1d9eef;
+    border: none;
+    border-radius: 4px 4px;
+    padding: 10px;
+    box-shadow: 1px 2px 5px #222;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#map {
+    display: none;
+}
 
 /* Main Container */
 .main {
@@ -37,6 +52,7 @@ body.dark-mode {
     max-width: 1200px;
     margin: auto;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -49,13 +65,18 @@ body.dark-mode {
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
-    z-index: 10; /* Keeps navbar above other elements */
+    z-index: 10;
+    /* Keeps navbar above other elements */
 }
 
 .logo {
-    color: #ff7200;
+    color: #1d9eef;
     font-size: 24px;
     font-weight: bold;
+}
+
+.highlight {
+    color: #fff;
 }
 
 .menu ul {
@@ -69,9 +90,10 @@ body.dark-mode {
     color: #fff;
     transition: color 0.3s;
 }
+
 .menu ul :hover {
     text-decoration-line: underline;
-    text-decoration-color: #ff9c42;
+    text-decoration-color: #1d9eef;
     text-underline-offset: 6px;
     transition: 1s;
 }
@@ -90,7 +112,7 @@ body.dark-mode {
 
 .btn {
     padding: 8px 12px;
-    background: #ff7200;
+    background: #0728ff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -99,14 +121,15 @@ body.dark-mode {
 }
 
 .btn:hover {
-    background: #ff9c42;
+    background: #0017ab;
 }
+
 /* HAMBURGER MENU */
-.menu-icon{
+.menu-icon {
     display: none;
 }
 
-.menu-icon i{
+.menu-icon i {
     color: #fff;
     font-size: xx-large;
 }
@@ -115,7 +138,7 @@ body.dark-mode {
 .contact-section {
     text-align: center;
     padding: 50px;
-    background-color: #f8f8f8;
+    background-color: honeydew;
     border-radius: 6px;
     margin-bottom: 20px;
 }
@@ -163,7 +186,7 @@ body.dark-mode {
 .contact-form button {
     width: 100%;
     padding: 12px;
-    background: #ff7200;
+    background: #1d9eef;
     color: white;
     border: none;
     border-radius: 5px;
@@ -172,7 +195,7 @@ body.dark-mode {
 }
 
 .contact-form button:hover {
-    background: #ff9c42;
+    background: #0728ff;
 }
 
 /* Contact Info */
@@ -181,6 +204,7 @@ body.dark-mode {
     min-width: 250px;
     text-align: left;
     padding: 20px;
+    margin-left: 2rem;
 }
 
 .contact-info h3 {
@@ -195,18 +219,37 @@ body.dark-mode {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        margin: -20%;
+    }
+
     .contact-container {
         flex-direction: column;
-        text-align: center;
+        padding: 5px;
     }
+
     .contact-info {
         text-align: center;
     }
+
+    .contact-form,
+    .contact-info {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .contact-form {
+        flex: 1;
+        min-width: 100px;
+    }
 }
 
+/*HAMBURGER MENU*/
 @media (max-width:768px) {
-    nav ul{
+    nav ul {
         position: absolute;
         top: 79px;
         left: 21px;
@@ -219,20 +262,42 @@ body.dark-mode {
         gap: 0;
         overflow: hidden;
     }
-    nav ul li{
+
+    nav ul li {
         padding: 10px;
         padding-bottom: 10px;
     }
-    .menu-icon{
+
+    .menu-icon {
         display: block;
     }
-    #menuList{
+
+    .mode {
+        color: #000;
+        padding: 0px 0px;
+    }
+
+    #menuList {
         transition: all 0.5s;
     }
-    .search{
+
+    .search {
         display: none;
     }
-    .logo{
+
+    .logo {
         font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }

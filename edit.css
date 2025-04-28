@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.main {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: honeydew;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+/* Button Styling */
+.mode {
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rex;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* Keeps navbar above other elements */
+}
+
+.logo {
+  color: #1d9eef;
+  font-size: 24px;
+  font-weight: bold;
+}
+.highlight{
+  color: #fff;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.menu ul :hover {
+  text-decoration-line: underline;
+  text-decoration-color: #1d9eef;
+  text-underline-offset: 6px;
+  transition: 1s;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.srch {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 8px;
+}
+
+.btn {
+  padding: 8px 12px;
+  background: #0728ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0017ab;
+}
+
+/* HAMBURGER MENU */
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #fff;
+  font-size: xx-large;
+}
+
+@media (max-width:768px) {
+  nav ul {
+    position: absolute;
+    top: 79px;
+    left: 21px;
+    right: 21px;
+    flex-direction: column;
+    text-align: center;
+    background: #333;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  nav ul li {
+    padding: 10px;
+    padding-bottom: 10px;
+  }
+
+  .mode {
+    color: #000;
+    padding: 0px 0px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menuList {
+    transition: all 0.5s;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* CODE EDITOR */
+#static-codetwo {
+  width: 46rem;
+  font-family: monospace;
+  background-color: #1e1e2f;
+  color: #abb2bf;
+  border: 1px solid #3f3f4f;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #222;
+}
+
+.code-editor {
+  text-align: center;
+  font-size: 42px;
+  color: #1d9eef;
+}
+
+#result {
+  color: #1d9eef;
+}
+
+#html {
+  color: #1d9eef;
+}
+
+.future {
+  color: #1d9eef;
+}
+
+.sample-par h1 {
+  color: #1f1d1d;
+}
+
+
+#output {
+  background-color: #1e1e2f;
+  color: #abb2bf;
+  border: 1px solid #3f3f4f;
+  padding: 3rem;
+  height: 24.9rem;
+  margin-top: 1rex;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #222;
+  font-family: monospace;
+}
+
+.editor {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tandpar {
+  text-align: center;
+  margin-left: 18rem;
+}
+
+.editpar {
+  font-size: large;
+}
+
+.btn-run {
+  background-color: #1d9eef;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+}
+
+.btn-run:hover {
+  background-color: #002bc5;
+  transition: 300ms ease;
+  box-shadow: 1px 1px 3px #222;
+  color: #121212;
+}
+
+.tags {
+  color: #1780c2;
+}
+
+.attributes {
+  color: #56b6c2;
+}
+
+.attribute-values {
+  color: #dedddb;
+}
+
+.comments {
+  color: #5c6370;
+}

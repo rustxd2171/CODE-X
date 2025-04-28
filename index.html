@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODE - X</title>
+    <title>PixelCode</title>
     <link rel="stylesheet" href="index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/png" href="./codex logo.jpg">
+    <link rel="icon" type="image/png" href="./pc logo.png">
 </head>
 
 <body>
@@ -17,21 +18,21 @@
         </div>
         <nav class="navbar">
             <div class="icon">
-                <h2 class="logo">CODE - X</h2>
+                <h2 class="logo"><span class="pixel">Pixel</span>Code</h2>
             </div>
             <div class="menu">
                 <ul id="menuList">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="price.html">PRICING</a></li>
+                    <li><a href="edit.html">EDITOR</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <button class="mode" id="modeToggle">Dark mode
                         <i class="bx bxs-moon"></i>
                     </button>
                 </ul>
                 <div class="menu-icon">
-                    <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                    <i class='bx bx-menu'></i>
                 </div>
             </div>
             <div class="search">
@@ -41,16 +42,17 @@
         </nav>
         <div class="contai">
             <div class="content">
-                <h1 class="web"><span class="highlight">Web Design &</span> Development Course</h1>
-                <h1 class="code">Learn to code, Shape your future</h1>
+                <h1 class="web"><span class="highlight" id="web">Web Design &</span> Development Course</h1>
+                <h1 class="code">Learn to code,<span class="highlight" id="code"> Shape your future</span></h1>
                 <p class="par">
-                    Empowering aspiring developers to master the art of coding. <br>Codex offers hands-on learning in
+                    Empowering aspiring developers to master the art of coding. <br>PixelCode offers hands-on learning
+                    in
                     HTML, CSS,
                     and JavaScript <br> you with the skills to create, innovate, and shape your digital future.
                 </p>
                 <button><a class="cn" href="page 2.html">Get Started</a></button>
             </div>
-            <img class="ai" src="./codex pc.jpg" alt="image">
+            <img class="ai" src="./pc.png" alt="image">
         </div>
         <section class="columns">
             <div class="column">
@@ -99,16 +101,16 @@
         </section>
         <div class="sample">
             <div class="sample-par">
-                <h1 style="font-weight: 600;">Code Your Future 🔮</h1>
+                <h1 style="font-weight: 600;" id="future">Code Your <span class="future">Future</span> 🔮</h1>
                 <br>
                 <p class="morepar fade-in">
-                    At Codex, we believe coding is for everyone. Whether you're a curious beginner or someone
+                    At PixelCode, we believe coding is for everyone. Whether you're a curious beginner or someone
                     looking to sharpen your skills, our interactive lessons make learning HTML, CSS, and JavaScript
                     accessible and enjoyable. Build confidence as you create real world projects, solve coding
                     challenges,
                     and master essential programming concepts all at your own pace. Curious about coding? Try a quick
                     sample
-                    below and see how easy it is to start learning with Codex.</p>
+                    below and see how easy it is to start learning with PixelCode.</p>
             </div>
             <div class="snippet" id="snippet">
                 <h1 class="example" id="example">🔴🟡🟢HTML Example</h1>
@@ -138,7 +140,7 @@
                 </p>
             </div>
             <div class="usercode">
-                <h1>🔴🟡🟢HTML CODE</h1>
+                <h1 id="html">🔴🟡🟢HTML CODE</h1>
                 <pre id="static-codetwo">
 &lt;<span class="tags">!DOCTYPE html</span>&gt;
 &lt;<span class="tags">html</span>&gt;
@@ -163,7 +165,7 @@
                     Editor</button>
             </div>
             <div class="result">
-                <h1>RESULT:</h1>
+                <h1 id="result">RESULT:</h1>
                 <div id="output">
                     <!DOCTYPE html>
                     <html>
@@ -190,176 +192,72 @@
                 <button class="btn-run" style="margin-top: 10px;">See Result</button>
             </div>
         </div>
-        <div class="nextsection">
-            <div class="first">
-                <img class="bigimg" src="./1g.png">
-                <div class="smallimg">
-                    <h2 class="header">Learn HTML</h2>
-                    <button class="firstbtn"><a class="firstbtn" href="page 2.html">Get Started</a></button>
+        <div class="contact">
+            <!--==================== CARD ====================-->
+            <article class="card__content grid">
+                <div class="card__pricing">
+                    <div class="card__pricing-number">
+                        <span class="card__pricing-symbol">$</span>19
+                    </div>
+                    <span class="card__pricing-month">/month</span>
                 </div>
-            </div>
-            <div class="second">
-                <img class="bigimg" src="./2g.png">
-                <div class="smallimg2">
-                    <h2 class="header">Learn CSS</h2>
-                    <button class="firstbtn"><a class="firstbtn" href="page 2.html">Get Started</a></button>
-                </div>
-            </div>
-            <div class="third">
-                <img class="bigimg" src="./3g.png">
-                <div class="smallimg3">
-                    <h2 class="header">Learn Java.S</h2>
-                    <button class="firstbtn"><a class="firstbtn" href="page 2.html">Get Started</a></button>
-                </div>
-            </div>
-        </div>
-        <section class="card container grid">
-            <div class="card__container grid">
-                <!--==================== CARD 1 ====================-->
-                <article class="card__content grid">
-                    <div class="card__pricing">
-                        <div class="card__pricing-number">
-                            <span class="card__pricing-symbol">$</span>0
-                        </div>
-                        <span class="card__pricing-month">/month</span>
+
+                <header class="card__header">
+                    <div class="card__header-circle grid">
+                        <img src="pro-coin.png" alt="" class="card__header-img">
                     </div>
 
-                    <header class="card__header">
-                        <div class="card__header-circle grid">
-                            <img src="free-coin.png" alt="" class="card__header-img">
-                        </div>
+                    <span class="card__header-subtitle">Most popular</span>
+                    <h1 class="card__header-title">Professional</h1>
+                </header>
 
-                        <span class="card__header-subtitle">Free plan</span>
-                        <h1 class="card__header-title">Basic</h1>
-                    </header>
-
-                    <ul class="card__list grid">
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">3 user request</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">10 downloads per day</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Daily content updates</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Fully editable files</p>
-                        </li>
-                    </ul>
-                    <a class="card__button" href="zero.html">Choose this plan</a>
-                </article>
-
-                <!--==================== CARD 2 ====================-->
-                <article class="card__content grid">
-                    <div class="card__pricing">
-                        <div class="card__pricing-number">
-                            <span class="card__pricing-symbol">$</span>19
-                        </div>
-                        <span class="card__pricing-month">/month</span>
-                    </div>
-
-                    <header class="card__header">
-                        <div class="card__header-circle grid">
-                            <img src="pro-coin.png" alt="" class="card__header-img">
-                        </div>
-
-                        <span class="card__header-subtitle">Most popular</span>
-                        <h1 class="card__header-title">Professional</h1>
-                    </header>
-
-                    <ul class="card__list grid">
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">100 user request</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Unlimited downloads</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Unlock all features from our site</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Daily content updates</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Fully editable files</p>
-                        </li>
-                    </ul>
-                    <a class="card__button" href="https://www.paypal.com/ncp/payment/RAXR27GCH79UL">Choose this
-                        plan</a>
-                </article>
-
-                <!--==================== CARD 3 ====================-->
-                <article class="card__content grid">
-                    <div class="card__pricing">
-                        <div class="card__pricing-number">
-                            <span class="card__pricing-symbol">$</span>29
-                        </div>
-                        <span class="card__pricing-month">/month</span>
-                    </div>
-
-                    <header class="card__header">
-                        <div class="card__header-circle grid">
-                            <img src="enterprise-coin.png" alt="" class="card__header-img">
-                        </div>
-
-                        <span class="card__header-subtitle">For Developers</span>
-                        <h1 class="card__header-title">Enterprise</h1>
-                    </header>
-
-                    <ul class="card__list grid">
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Unlimited user request</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Unlimited downloads</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Unlock all features from our site</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Daily content updates</p>
-                        </li>
-                        <li class="card__list-item">
-                            <i class="uil uil-check card__list-icon"></i>
-                            <p class="card__list-description">Fully editable files</p>
-                        </li>
-                    </ul>
-                    <a class="card__button" href="https://www.paypal.com/ncp/payment/38C3UVHPXNWEJ">Choose this
-                        plan</a>
-                </article>
+                <ul class="card__list grid">
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">100 user request</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlimited downloads</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Unlock all features from our site</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Daily content updates</p>
+                    </li>
+                    <li class="card__list-item">
+                        <i class="uil uil-check card__list-icon"></i>
+                        <p class="card__list-description">Fully editable files</p>
+                    </li>
+                </ul>
+                <a class="card__button" href="https://www.paypal.com/ncp/payment/RAXR27GCH79UL">Choose this
+                    plan</a>
+            </article>
+            <div class="none">
+                <form class="contact-form" action="https://formsubmit.co/nathaniemzinahbizu@gmail.com" method="POST">
+                    <h3 class="h3">Have <span class="question">Questions?</span><span class="question">Contact</span> Us!</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="msg" placeholder="Your Message" rows="5" required></textarea>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="qrcode" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <h2>Show Your Friends</h2>
+                    <h1 style="text-decoration: underline; text-decoration-color: #1d9eef; text-underline-offset: 4px;">
+                        Scan Me!</h1>
+                    <img class="qr" src="./qrcode_rustxd2171.github.io (1).png" alt="QR Code" style="max-width: 100%;">
+                </div>
             </div>
-        </section>
-        <div class="form">
-            <h2>Login</h2>
-            <form onsubmit="login(event)">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button class="btnn" type="submit" id="submit">Login</button>
-            </form>
-            <p class="link" style="color: #121212;">Don't have an account?<br>
-                <a class="link" href="registerpage.html">Sign up here</a>
-            </p>
-            <p class="liw">Log in with</p>
-            <div class="icons">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-google'></i></a>
-                <a href="#"><i class='bx bxl-skype'></i></a>
+            <div class="QR">
+                <h2>Show Your Friends</h2>
+                <h1>Scan Me</h1>
+                <img class="qr1" src="./qrcode_rustxd2171.github.io (1).png" alt="QR Code" style="max-width: 100%;">
             </div>
         </div>
         <footer>
@@ -387,12 +285,12 @@
                     <a href="#"><i class='bx bxl-tiktok'></i></a>
                 </div>
             </div>
-            <p>&copy; 2024 Our Company Name. All rights reserved.</p>
+            <p>&copy; 2025 PixelCode. All rights reserved.</p>
         </footer>
     </div>
     <script src="https://widget.galichat.com/gali-embeded.min.js" chat-hash="5t616aaglwi2ybmjppew7y" defer>
     </script>
-    <script type="module" src="index.js" defer></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

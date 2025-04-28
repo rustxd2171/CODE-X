@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="edit.css">
+    <link rel="icon" type="image/png" href="./pc logo.png">
+    <title>Editor/PixelCode</title>
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar">
+            <div class="icon">
+                <h2 class="logo"><span class="highlight">Pixel</span>Code</h2>
+            </div>
+            <div class="menu">
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="edit.html">EDITOR</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <button class="mode" id="modeToggle">Dark mode
+                        <i class="bx bxs-moon"></i>
+                    </button>
+                </ul>
+                <div class="menu-icon">
+                    <i class='bx bx-menu' onclick="toggleMenu()"></i>
+                </div>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <button class="btn" onclick="window.location.href='#'">Search</button>
+            </div>
+        </nav>
+        <div class="editor">
+            <div class="tandpar">
+                <h1 class="code-editor">Code Editor</h1>
+                <p class="editpar">With our online code editor, you can edit code and view the result in your browser
+                </p>
+            </div>
+            <div class="usercode">
+                <h1 id="html">🔴🟡🟢HTML CODE</h1>
+                <pre id="static-codetwo">
+&lt;<span class="tags">!DOCTYPE html</span>&gt;
+&lt;<span class="tags">html</span>&gt;
+  &lt;<span class="tags">head</span>&gt;
+    &lt;<span class="tags">title</span>&gt;<span class="attribute-values">Interactive Page</span>&lt;/<span class="tags">title</span>&gt;
+  &lt;/<span class="tags">head</span>&gt;
+  &lt;<span class="tags">body</span>&gt;
+
+    &lt;<span class="tags">h1</span>&gt;<span class="attribute-values">Hello World</span>&lt;/<span class="tags">h1</span>&gt;
+    &lt;<span class="tags">p</span>&gt;<span class="attribute-values">Welcome to this simple example page.</span>&lt;/<span class="tags">p</span>&gt;
+    &lt;<span class="tags">ul</span>&gt;
+      &lt;<span class="tags">li</span>&gt;<span class="attribute-values">Item 1</span>&lt;/<span class="tags">li</span>&gt;
+      &lt;<span class="tags">li</span>&gt;<span class="attribute-values">Item 2</span>&lt;/<span class="tags">li</span>&gt;
+      &lt;<span class="tags">li</span>&gt;<span class="attribute-values">Item 3</span>&lt;/<span class="tags">li</span>&gt;
+    &lt;/<span class="tags">ul</span>&gt;
+    &lt;<span class="tags">button</span> <span class="attributes">onclick</span>=<span class="attribute-values">"alert('You clicked the button!');"</span>&gt;<span class="attribute-values">Click Me</span>&lt;/<span class="tags">button</span>&gt;
+
+  &lt;/<span class="tags">body</span>&gt;
+&lt;/<span class="tags">html</span>&gt;
+            </pre>
+                <button class="btn-run" onclick="redirectToResult()" style="margin-top: 10px;">Try Frontend
+                    Editor</button>
+            </div>
+            <div class="result">
+                <h1 id="result">RESULT:</h1>
+                <div id="output">
+                    <!DOCTYPE html>
+                    <html>
+
+                    <head>
+                        <title>Interactive Page</title>
+                    </head>
+
+                    <body>
+
+                        <h1>Hello World</h1>
+                        <p>Welcome to this simple example page.</p>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                        <button onclick="alert('You clicked the button!');">Click Me</button>
+
+                    </body>
+
+                    </html>
+                </div>
+                <button class="btn-run" style="margin-top: 10px;">See Result</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "300px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+        const modeToggle = document.getElementById('modeToggle');
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>';
+            } else {
+                modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>';
+            }
+
+            if (document.body.classList.contains('dark-mode')) {
+                text.style.color = "lightblue";
+            } else {
+                text.style.color = "black";
+            }
+        });
+    </script>
+</body>
+
+</html>

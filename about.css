@@ -11,6 +11,7 @@ body {
    justify-content: center;
    align-items: center;
    min-height: 100vh;
+   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark Mode */
@@ -48,13 +49,16 @@ body.dark-mode {
    border-radius: 8px;
    position: sticky;
    top: 0;
-   z-index: 10; /* Keeps navbar above other elements */
+   z-index: 10; 
 }
 
 .logo {
-   color: #ff7200;
+   color: #1d9eef;
    font-size: 24px;
    font-weight: bold;
+}
+.highlight{
+   color: #fff;
 }
 
 .menu ul {
@@ -64,7 +68,7 @@ body.dark-mode {
 }
 .menu ul :hover{
    text-decoration-line: underline;
-   text-decoration-color: #ff9c42;
+   text-decoration-color: #1d9eef;
    text-underline-offset: 6px;
    transition: 1s;
 }
@@ -75,9 +79,6 @@ body.dark-mode {
    transition: color 0.3s;
 }
 
-.menu ul li a:hover {
-   color: #ff7200;
-}
 .srch {
    padding: 8px;
    border-radius: 5px;
@@ -86,7 +87,7 @@ body.dark-mode {
 }
 .btn {
    padding: 8px 12px;
-   background: #ff7200;
+   background: #0728ff;
    color: #fff;
    border: none;
    border-radius: 5px;
@@ -94,19 +95,19 @@ body.dark-mode {
    transition: background 0.3s;
 }
 .btn:hover {
-   background: #ff9c42;
+   background: #0017ab;
 }
 .all {
    display: flex;
-   justify-content: space-between; /* Space between the text content and the image */
-   align-items: center; /* Vertically align text and image */
+   justify-content: space-between; 
+   align-items: center; 
    width: 100%;
    margin-bottom: 12rem;
 }
 
 .content {
    display: flex;
-   flex-direction: row; /* Align the content and image horizontally */
+   flex-direction: row; 
    width: 100%;
 }
 
@@ -117,35 +118,35 @@ body.dark-mode {
 
 
 .text {
-   flex: 1; /* The text takes up the left space */
+   flex: 1;
    color: black;
    text-decoration: underline;
    text-underline-offset: 5px;
-   text-decoration-color: #ff7200;
+   text-decoration-color: #1d9eef;
    font-size: large;
    margin-left: 5rem;
    margin-bottom: 20px;
 }
 
 .par {
-   flex: 1; /* Paragraph takes up the remaining space alongside the heading */
+   flex: 1; 
    padding: 10px;
-   width: 400px; /* Set small width */
+   width: 400px; 
    text-align: justify;
    font-style: italic;
    border: none; 
 }
 
 .image {
-   width: 400px; /* Adjust the image width */
+   width: 400px; 
    height: auto;
-   margin-left: -8rem; /* Adds space between the paragraph and image */
+   margin-left: -8rem;
 }
 
 .btnn {
    margin-top: 20px;
    padding: 10px 20px;
-   background-color: #ff7200; /* Button color */
+   background-color: #1d9eef; 
    color: white;
    border: none;
    cursor: pointer;
@@ -153,7 +154,8 @@ body.dark-mode {
 }
 
 .btnn:hover {
-   background-color: #e55d00; /* Button hover effect */
+   background-color: #0728ff;
+   transition: 800ms ease; 
 }
 
 .extra-text {
@@ -161,11 +163,10 @@ body.dark-mode {
    margin-top: 10px;
 }
 
-/* Ensures that the text content stays to the left and the image is on the right */
 .content-wrapper {
    display: flex;
-   flex-direction: column; /* Stack the text and paragraph vertically */
-   width: 60%; /* Adjust the width of the content area */
+   flex-direction: column; 
+   width: 60%; 
 }
 
 .menu-icon{
@@ -213,7 +214,7 @@ body.dark-mode {
       margin-top: 19px;
       text-decoration: underline;
       text-underline-offset: 3px;
-      text-decoration-color: #ff7200;
+      text-decoration-color: #1d9eef;
    }
    .img{
       display: none;
@@ -263,7 +264,7 @@ body.dark-mode {
       margin-top: 19px;
       text-decoration: underline;
       text-underline-offset: 5px;
-      text-decoration-color: #ff7200;
+      text-decoration-color: #1d9eef;
    }
    .bttn{
       margin-top: 20px;

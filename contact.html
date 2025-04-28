@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="./pc logo.png">
+    <title>Contact/PixelCode</title>
 </head>
 
 <body>
     <div class="main">
         <nav class="navbar">
             <div class="icon">
-                <h2 class="logo">CODE - X</h2>
+                <h2 class="logo"><span class="highlight">Pixel</span>Code</h2>
             </div>
             <div class="menu">
                 <ul id="menuList">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="price.html">PRICING</a></li>
+                    <li><a href="edit.html">EDITOR</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <button class="mode" id="modeToggle">Dark mode
                         <i class="bx bxs-moon"></i>
@@ -35,31 +36,34 @@
                 <button class="btn" onclick="window.location.href='#'">Search</button>
             </div>
         </nav>
-        <!-- Contact Section -->
         <section class="contact-section">
             <h1>Contact Us</h1>
             <p>Have any questions? Feel free to reach out to us!</p>
 
             <div class="contact-container">
-                <!-- Contact Form -->
                 <form class="contact-form" action="https://formsubmit.co/nathaniemzinahbizu@gmail.com" method="POST">
-                <input type="text"  name="name" placeholder="Your Name" required>
-                <input type="email"name="email" placeholder="Your Email" required>
-                <input type="text"name="subject" placeholder="Subject" required>
-                <textarea name="msg" placeholder="Your Message" rows="5" required></textarea>
-                <input type="hidden" name="_captcha" value="false">
-                <button type="submit">Send Message</button>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="msg" placeholder="Your Message" rows="5" required></textarea>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit">Send Message</button>
                 </form>
-
-                <!-- Contact Info -->
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Address:</strong> CMC ,Summit,20-meter </p>
-                    <p><strong>Email:</strong> Nathaniem@gmail.com</p>
-                    <p><strong>Phone:</strong> +251 975876505</p>
-                    <p><strong>Hours:</strong> Mon - Fri, 9 AM - 6 PM</p>
+                <div>
+                    <div id="info" class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><strong>Address:</strong> CMC, Summit, 20-meter </p>
+                        <p><strong>Email:</strong> Nathaniemzinahbizu@gmail.com</p>
+                        <p><strong>Phone:</strong> +251 975876505</p>
+                        <p><strong>Hours:</strong> Mon - Fri, 9 AM - 6 PM</p>
+                    </div>
+                    <button id="btnmap">Show map</button>
+                    <iframe id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7881.097820604213!2d38.85563519999999!3d9.013587599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1743344037243!5m2!1sen!2set"
+                        width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
         </section>
     </div>
     <script>
@@ -74,29 +78,46 @@
                 menuList.style.maxHeight = "0px";
             }
         }
-    </script>
-    <script>
-        // Select the button
-        const modeToggle = document.getElementById('modeToggle');
 
-        // Add event listener to toggle the mode
+        const modeToggle = document.getElementById('modeToggle');
         modeToggle.addEventListener('click', () => {
-            // Toggle the "dark-mode" class on the body
             document.body.classList.toggle('dark-mode');
 
-            // Update button text and icon based on the current mode
             if (document.body.classList.contains('dark-mode')) {
-                modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>'; // Switch to light mode icon and text
+                modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>';
             } else {
-                modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>'; // Switch to dark mode icon and text
+                modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>';
             }
-            // Toggle the color of the paragraph text
             if (document.body.classList.contains('dark-mode')) {
-                text.style.color = "lightblue"; // Set paragraph text color to light blue in dark mode
+                text.style.color = "lightblue";
             } else {
-                text.style.color = "black"; // Reset to black in light mode
+                text.style.color = "black";
             }
         });
+
+        const btnmap = document.getElementById("btnmap");
+        const maps = document.getElementById("maps");
+        const info = document.getElementById("info");
+
+        btnmap.addEventListener('click', function () {
+            if (map.style.display === 'none') {
+                map.style.display = 'block';
+                btnmap.textContent = 'Hide map';
+                info.style.display = 'none';
+            } else {
+                map.style.display = 'none';
+                btnmap.textContent = 'Show map';
+            }
+        });
+        btnmap.addEventListener('click', function () {
+            if (map.style.display === 'block') {
+                info.style.display = 'none';
+
+            } else {
+                info.style.display = 'block';
+            }
+        });
+
     </script>
 </body>
 

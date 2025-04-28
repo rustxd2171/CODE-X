@@ -1,49 +1,67 @@
 window.onload = function () {
   const savedTheme = localStorage.getItem('theme');
   const modeToggle = document.getElementById('modeToggle');
+  const snippet = document.getElementById('snippet');
+  const example = document.getElementById('example');
+  const code = document.getElementById('code');
+  const web = document.getElementById('web');
 
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
-    modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>';
-    document.getElementById('snippet').style.backgroundColor = '#333';
-    document.getElementById('example').style.color = '#fff'
-
+    if (modeToggle) modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>';
+    if (snippet) snippet.style.backgroundColor = '#333';
+    if (example) example.style.color = '#fff';
+    if (code) code.style.color = '#fff';
+    if (web) web.style.color = '#fff';
   } else {
     document.body.classList.remove('dark-mode');
-    modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>';
-    document.getElementById('snippet').style.backgroundColor = '#fff';
-    document.getElementById('example').style.color = '#222';
+    if (modeToggle) modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>';
+    if (snippet) snippet.style.backgroundColor = '#fff';
+    if (example) example.style.color = '#222';
+    if (code) code.style.color = '#1f1d1d';
+    if (web) web.style.color = '#1f1d1d';
   }
-}
+};
 
-//code snippet
-function showResult() {
-  const code = document.getElementById("code-editor").value; // Get user code
-  const preview = document.getElementById("preview"); // Get iframe
-  preview.srcdoc = code; // Inject the code into the iframe
-}
 
 
 
 const snippet = document.getElementById('snippet');
 const x = document.getElementById('example');
+const code = document.getElementById('code');
+const future = document.getElementById('future');
+const web = document.getElementById('web');
+const html = document.getElementById('html');
+const result = document.getElementById('result');
 const modeToggle = document.getElementById('modeToggle');
+snippet.style.transition = '1s';
+
 modeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
+  
   if (document.body.classList.contains('dark-mode')) {
-    document.getElementById('snippet').style.backgroundColor = '#333';
-    document.getElementById('example').style.color = '#fff'
-    document.getElementById('snippet').style.transition = '1s';
+    snippet.style.backgroundColor = '#333';
+    x.style.color = '#fff';
+    code.style.color = '#fff';
+    future.style.color = '#fff';
+    web.style.color = '#fff';
+    html.style.color = '#fff';
+    result.style.color = '#fff';
     modeToggle.innerHTML = 'Light Mode <i class="bx bxs-sun"></i>';
-
     localStorage.setItem('theme', 'dark');
   } else {
-    document.getElementById('snippet').style.backgroundColor = '#fff';
+    snippet.style.backgroundColor = '#fff';
+    x.style.color = '#1f1d1d';
+    code.style.color = '#1f1d1d';
+    future.style.color = '#1f1d1d';
+    web.style.color = '#1f1d1d';
+    html.style.color = '#1f1d1d';
+    result.style.color = '#1f1d1d';
     modeToggle.innerHTML = 'Dark Mode <i class="bx bxs-moon"></i>';
-    document.getElementById('example').style.color = '#222';
     localStorage.setItem('theme', 'light');
   }
 });
+
 
 // card animation on scroll
 window.addEventListener('scroll', () => {
@@ -56,67 +74,36 @@ window.addEventListener('scroll', () => {
   }
 });
 
+//Map
+const map = document.getElementById('map');
+const info = document.getElementById('info');
+const mapbtn = document.getElementById('mapbtn');
+
+mapbtn.addEventListener('click', function () {
+  if (map.style.display === 'none') {
+    map.style.display = 'block'
+    info.style.display = 'none'
+    mapbtn.textContent = 'Hide Map'
+  }
+  else {
+    map.style.display = 'none'
+    info.style.display = 'block'
+    mapbtn.textContent = 'Show Map'
+  }
+});
 
 //hamburger menu
 let menuList = document.getElementById("menuList")
 menuList.style.maxHeight = "0px";
 
 function toggleMenu() {
-  if (menuList.style.maxHeight == "0px") {
-    menuList.style.maxHeight = "300px";
-  }
-  else {
-    menuList.style.maxHeight = "0px";
-  }
+    if (menuList.style.maxHeight == "0px") {
+        menuList.style.maxHeight = "300px";
+    }
+    else {
+        menuList.style.maxHeight = "0px";
+    }
 }
-
-
-//login
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBjErrnILNn6-vCOOXadPJioiHr5e9x29o",
-  authDomain: "loginform-31195.firebaseapp.com",
-  projectId: "loginform-31195",
-  storageBucket: "loginform-31195.firebasestorage.app",
-  messagingSenderId: "929008158439",
-  appId: "1:929008158439:web:7c409af3dee09791174442"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-
-//submit button
-const submit = document.getElementById('submit');
-submit.addEventListener("click", function (event) {
-  event.preventDefault()
-  //inputs email & password
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed up 
-      const user = userCredential.user;
-      alert("Logging in...")
-      window.location.href = "after.html";
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage)
-      // ..
-    });
-});
-
 
 //loading...
 document.getElementById("loading-spinner").style.display = "flex";

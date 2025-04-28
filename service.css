@@ -47,61 +47,67 @@ body.dark-mode {
    background-color: #333;
    color: #fff;
    border-radius: 8px;
-   margin-bottom: 50px;
-}
-
-.logo {
-   color: #ff7200;
+   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+   position: sticky;
+   top: 0;
+   z-index: 10;
+   /* Keeps navbar above other elements */
+ }
+ 
+ .logo {
+   color: #1d9eef;
    font-size: 24px;
    font-weight: bold;
-}
-
-.menu ul {
+ }
+ .highlight{
+   color: #fff;
+ }
+ 
+ .menu ul {
    list-style: none;
    display: flex;
    gap: 20px;
-}
-
-.menu ul li a {
+ }
+ 
+ .menu ul li a {
    text-decoration: none;
    color: #fff;
    transition: color 0.3s;
-}
-
-.menu ul :hover {
+ }
+ 
+ .menu ul :hover {
    text-decoration-line: underline;
-   text-decoration-color: #ff9c42;
+   text-decoration-color: #1d9eef;
    text-underline-offset: 6px;
    transition: 1s;
-}
-
-
-.search {
+ }
+ 
+ .search {
    display: flex;
    align-items: center;
-}
-
-.srch {
+ }
+ 
+ .srch {
    padding: 8px;
    border-radius: 5px;
    border: 1px solid #ddd;
    margin-right: 8px;
-}
-
-.btn {
+ }
+ 
+ .btn {
    padding: 8px 12px;
-   background: #ff7200;
+   background: #0728ff;
    color: #fff;
    border: none;
    border-radius: 5px;
    cursor: pointer;
    transition: background 0.3s;
-}
-
-.btn:hover {
-   background: #ff9c42;
-}
-
+ }
+ 
+ .btn:hover {
+   background: #0017ab;
+ }
+ 
 /* Hero Section */
 .hero {
    text-align: center;
@@ -110,7 +116,9 @@ body.dark-mode {
    border-radius: 8px;
    margin-bottom: 40px;
 }
-
+.service{
+   color: #1d9eef;
+}
 .hero h1 {
    font-size: 36px;
    color: #333;
@@ -147,7 +155,7 @@ body.dark-mode {
 
 .service-card i {
    font-size: 40px;
-   color: #ff7200;
+   color: #0017ab;
    margin-bottom: 15px;
 }
 
@@ -165,7 +173,7 @@ body.dark-mode {
 .cta {
    text-align: center;
    padding: 40px;
-   background: #ff7200;
+   background: #1d9eef;
    color: white;
    border-radius: 8px;
    margin-top: 50px;
@@ -176,9 +184,9 @@ body.dark-mode {
    margin-bottom: 10px;
 }
 
-.cta button {
+.contact {
    background: white;
-   color: #ff7200;
+   color: #333;
    padding: 10px 20px;
    border: none;
    font-size: 16px;
@@ -186,8 +194,11 @@ body.dark-mode {
    cursor: pointer;
    transition: 0.3s;
 }
+.contact{
+   text-decoration: none;
+}
 
-.cta button:hover {
+.contact:hover {
    background: #fff3e0;
 }
 /* Responsive Design */
